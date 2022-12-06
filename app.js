@@ -15,7 +15,7 @@ app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 app.use(logger('dev'));
 app.use(express.static(path.resolve(__dirname, './views/common/public')));
-console.log(__dirname);
+
 // development only
 if ('development' === app.get('env')) {
     app.use(errorHandler());
@@ -29,7 +29,9 @@ app.use('/json', markdownServe.middleware({
 app.use(markdownServe.middleware({ 
     rootDirectory: path.resolve(__dirname),
     view: 'markdown',
-    preParse: true
+    preParse: function(markdownFile) {
+        return { content: markdownFile.parseContent(), host: app.get('host') +':'+ app.get('port')};
+    }
 }));
 
 app.listen(app.get('port'), function(){
