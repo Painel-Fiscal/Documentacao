@@ -1,43 +1,54 @@
 # OS 10801
 |PASSO|DESCRICAO|STATUS|
 |:---:|---------|------|
-|1|Telas/Relatorios/Atualiza��es|Realizado/Liberado|
-|2|Exporta��es|Realizado/Liberado|
-|3|Importa��es|Em Andamento|
-|4|Auditorias|N�o Realizado|
+|1|Telas/Relatorios/Atualizações|Realizado/Liberado|
+|2|Exportações|Realizado/Liberado|
+|3|Importações|Em Andamento|
+|4|Auditorias|Não Realizado|
 ||||
 
 ## Scripts 1415 e 1416
+
 ---
-## Principais altera��es no Guia Pr�tico da EFD-ICMS/IPI � vers�o 3.1.0
+
+## Principais alterações no Guia Prático da EFD-ICMS/IPI - versão 3.1.0
+
 ---
-### 1. Descontinua��o dos c�digos 04 e 05 da tabela 4.1.2 � Tabela Situa��o de Documentos a partir de 31/12/2022.
+
+### 1. Descontinuação dos códigos 04 e 05 da tabela 4.1.2 - Tabela Situação de Documentos a partir de 31/12/2022.
+
 |ITEM|DESCRICAO|STATUS|
 |----|---------|------|
-|1.1|Incluir verifica��o nas auditorias de NF�s|Passo 4|
+|1.1|Incluir verificação nas auditorias de NF's|Passo 4|
+
 ---
-### 2. Inclus�o dos registros 0221, C855, C857, C895, C897, D700, D730, D731, D735, D737, D750, D760 e D761
+
+### 2. Inclusão dos registros 0221, C855, C857, C895, C897, D700, D730, D731, D735, D737, D750, D760 e D761
+
 |ITEM|DESCRICAO|STATUS|
 |----|---------|------|
-|2.1|0221 - Somente para 2024 - ser� criada nova Os;|----------|
+|2.1|0221 - Somente para 2024 - será criada nova Os;|----------|
 |2.2|C855, C857, C895, C897 - novas tabelas SF_C855 e SF_C857;|----------|
 |2.2.1|Criar novas telas|Realizado/Liberado|
 ||Criar Ids Arquivo|Realizado/Liberado|
-||Exporta��o|Realizado/Liberado|
-||Verificar procedures de gera��es de dados na exporta��o de Speds;|Realizado/Liberado|
-||Importa��o TMP|Realizado|
-||Importa��o Layouts|Em Andamento|
+||Exportação|Realizado/Liberado|
+||Verificar procedures de gerações de dados na exportação de Speds;|Realizado/Liberado|
+||Importação TMP|Realizado|
+||Importação Layouts|Em Andamento|
 |2.3|D700, D730, D731, D735, D737, D750, D760 e D761 - novos campos nas tabelas AC_C700_ENTRADA e AC_C700_SAIDA;|----------|
-|2.3.1|Criar novo id_modelo_documento para c�digo 62;|Realizado/Liberado|
+|2.3.1|Criar novo id_modelo_documento para código 62;|Realizado/Liberado|
 |2.3.2|Alterar telas de notas fiscais|Realizado/Liberado|
 ||Incluir novos campos|Realizado/Liberado|
 ||Criar Ids Arquivo|Realizado/Liberado|
-||Exporta��o|Realizado/Liberado|
-||Verificar procedures de gera��es de dados na exporta��o de Speds;|Realizado/Liberado|
-||Importa��o TMP|Realizado|
-||Importa��o Layouts|Em Andamento|
+||Exportação|Realizado/Liberado|
+||Verificar procedures de gerações de dados na exportação de Speds;|Realizado/Liberado|
+||Importação TMP|Realizado|
+||Importação Layouts|Em Andamento|
+
 ---
-#### 3. Inclus�o da exce��o n� 2 na valida��o do registro C800
+
+#### 3. Inclusão da exceção n° 2 na valida��o do registro C800
+
 |ITEM|DESCRICAO|STATUS|
 |----|---------|------|
 |3.1|Tratar na importa��o de dados||
