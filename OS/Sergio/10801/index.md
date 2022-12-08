@@ -15,7 +15,7 @@
 
 ---
 
-### 1. Descontinuação dos códigos 04 e 05 da tabela 4.1.2 - Tabela Situação de Documentos a partir de 31/12/2022.
+#### 1. Descontinuação dos códigos 04 e 05 da tabela 4.1.2 - Tabela Situação de Documentos a partir de 31/12/2022.
 
 |ITEM|DESCRICAO|STATUS|
 |----|---------|------|
@@ -23,7 +23,7 @@
 
 ---
 
-### 2. Inclusão dos registros 0221, C855, C857, C895, C897, D700, D730, D731, D735, D737, D750, D760 e D761
+#### 2. Inclusão dos registros 0221, C855, C857, C895, C897, D700, D730, D731, D735, D737, D750, D760 e D761
 
 |ITEM|DESCRICAO|STATUS|
 |----|---------|------|
