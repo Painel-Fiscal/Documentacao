@@ -134,3 +134,19 @@ se foi somado os valore referentes ao dias anteriores. Lembrar tbm de fazer este
 - Testes no Banco: Oracle e SQL Server
 - Sugestão de teste / Resultado esperado :
   - O nome do arquivo excel no final ter� 15 digitos sequencial, iniciando com _000000000000001 e será incrementado conforme for sendo gerado o excel.
+
+
+**Abertura Tramite**
+
+- Módulo: Sped Tributações Acessorias
+- Problema: Precisa incorporar a geração existente da integraçao anp.
+- Solução: Feito a integração para ter os dados consistente.
+- Objeto(s) (Oracle / SQL Server): 
+  - anp_estoque_diario.pas - versao: 10
+- Formulário(s) (Delphi):
+- Testes no Banco: Oracle e SQL Server
+  - dbo.sp_gera_anp_estoque_diario.sql - versao: 8
+  - sp_gera_anp_estoque_diario.sql - versao: 7
+- Sugestão de teste / Resultado esperado :
+  -  Continua o mesmo processo de geração, Porém as informações veem de outros lugares, como a nota fiscais do sped fiscal e no controle de estoque. Portanto terá que fazer lançamentos nestas notas fiscais para serem levadas as notas da ANP e então gerada o estoque diário anp. Daiane pode solicitar explicação se precisar.
+  - A regra é que sempre inicie a geração no primeiro dia do mes até onde o cliente escolheu a data.
