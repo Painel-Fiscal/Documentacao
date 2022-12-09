@@ -1,0 +1,11 @@
+OS 10776
+Nome da Tela: Estoque Diário
+
+Desenvolver Tela, Geração e Exportação (em excel)
+
+Lembrete.
+Trigger para as tabelas
+tabela - anp_estoque_diario;
+Menu
+
+tem tmp?

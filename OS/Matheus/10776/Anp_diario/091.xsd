@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="_091" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+
+  <xs:simpleType name="identificador_externo">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="50"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="integer_1">
+    <xs:restriction base="xs:positiveInteger">
+      <xs:totalDigits value="1"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="integer_9">
+    <xs:restriction base="xs:positiveInteger">
+      <xs:totalDigits value="9"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="integer_10">
+    <xs:restriction base="xs:positiveInteger">
+      <xs:totalDigits value="10"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="integer_15">
+    <xs:restriction base="xs:nonNegativeInteger">
+      <xs:totalDigits value="15"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="tipo_operacao">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="1"/>
+      <xs:maxInclusive value="3"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="formato_data">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="((19|20)[0-9]{2})(0[1-9]|1[0-2])(0[1-9]|[1-2][0-9]|3[0-1])"/>
+	  <!-- ANO: (19|20)[0-9]{2} -->
+	  <!-- MES: (0[1-9]|1[0-2]) -->
+	  <!-- DIA: (0[1-9]|[1-2][0-9]|3[0-1]) -->
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="raiz_cnpj">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9]{8}"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- LISTA DE ESTOQUE DIARIO -->
+  <xs:complexType name="itemListaEstoqueDiarioType">
+    <xs:sequence>
+      <xs:element name="ESTOQUE_DIARIO" type="itemEstoqueDiarioType" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- ESTOQUE DIARIO -->
+  <xs:complexType name="itemEstoqueDiarioType">
+    <xs:sequence>
+      <xs:element name="COD_OPERACAO" type="tipo_operacao" />      
+      <xs:element name="COD_ISIMP_ORIGEM" type="integer_10" minOccurs="0"/>
+      <xs:element name="COD_ISIMP_DESTINO" type="integer_10" minOccurs="0" />      
+      <xs:element name="RAIZ_CNPJ_PROP_PRODUTO" type="raiz_cnpj" minOccurs="0" />
+	  <xs:element name="COD_PRODUTO" type="integer_9" />
+	  <xs:element name="QTD_PRODUTO" type="integer_15" />
+	  <xs:element name="DATA_CHEGADA" type="formato_data" minOccurs="0" />
+	  <xs:element name="COD_MODO_TRANSPORTE" type="integer_1" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- DADOS GERAIS EDC -->
+  <xs:complexType name="itemEdcType">
+    <xs:sequence>
+      <xs:element name="IDENTIFICADOR_EXTERNO" type="identificador_externo" minOccurs="0"/>
+      <xs:element name="COD_REGULADO" type="integer_10"/>      
+      <xs:element name="DATA_REFERENCIA" type="formato_data" />      
+      <xs:element name="ESTOQUES_DIARIOS" type="itemListaEstoqueDiarioType" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:element name="ESTOQUES_DIARIOS_DE_COMBUSTIVEIS">
+    <xs:complexType>
+      <xs:choice>
+        <xs:element name="EDC" type="itemEdcType" minOccurs="1" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>
