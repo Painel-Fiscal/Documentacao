@@ -15,4 +15,72 @@
 	// 	],
 	// 	"description": "Log output to console"
 	// }
+	"Modelo de Abertura do OS" : {
+		"prefix": "modelo-a-os",
+		"description": "Modelo de Abertura do OS",
+		"body": [
+			"**Abertura OS**",
+			"- Cód. Empresa: $1",
+			"- Periodo: $2",
+			"- Caminho do menu: $3",
+			"- Ocorrencia: $4",
+		]
+	},
+	"Modelo de Fechamento da OS" : {
+		"prefix": "modelo-f-os",
+		"description": "Modelo de Fechamento do OS",
+		"body": [
+			"**Fechamento OS**",
+			"- Solução e dependências: $1",
+			"- Objeto(s) (Oracle / SQL Server) a ser atualizado: $2",
+			"- Script(s): $3",
+			"- Caminho Completo Menu: $4",
+			"- Versão: $5",
+			"- Data de liberação: $6",
+		]
+	},
+	"Modelo de Abertura do Tramite" : {
+		"prefix": "modelo-a-tramite",
+		"description": "Modelo de Abertura do Tramite",
+		"body": [
+			"**Abertura Tramite**",
+			"- Módulo: $1",
+			"- Problema: $2",
+			"- Solução: $3",
+			"- Objeto(s) (Oracle / SQL Server): $4",
+			"- Script(s): $5",
+			"- Formulário(s) (Delphi): $6",
+			"- Testes no Banco: ${7|Oracle, SQL Server}",
+			"- Sugestão de teste / Resultado esperado: $8"
+		]
+	},
+	"Modelo de Fechamento do Tramite com sucesso" : {
+		"prefix": "modelo-f-tramite-sucesso",
+		"description": "Modelo de Fechamento do Tramite com sucesso",
+		"body": [
+			"**Fechamento com sucesso**",
+			"- Solução: $1",
+			"- Versão: $2",
+			"- Data de liberação: $3",
+			"- Objeto(s) (Oracle / SQL Server): $4"
+		]
+	},
+	"Modelo de Fechamento do Tramite com observação" : {
+		"prefix": "modelo-f-tramite-observacao",
+		"description": "Modelo de Fechamento do Tramite com observação",
+		"body": [
+			"**Fechamento com observação**",
+			"- Solução: $1",
+			"- Versão: $2",
+			"- Data de liberação: $3",
+		]
+	},
+	"Modelo de Fechamento do Tramite com erros" : {
+		"prefix": "modelo-f-tramite-erros",
+		"description": "Modelo de Fechamento do Tramite com erros",
+		"body": [
+			"**Fechamento com erros",
+			"- Solução: $1",
+		]
+	}
 }
