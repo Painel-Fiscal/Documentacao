@@ -50,8 +50,8 @@
 			"- Objeto(s) (Oracle / SQL Server): $4",
 			"- Script(s): $5",
 			"- Formulário(s) (Delphi): $6",
-			"- Testes no Banco: ${7|Oracle, SQL Server}",
-			"- Sugestão de teste / Resultado esperado: $8"
+			"- Testes no Banco: Oracle, SQL Server",
+			"- Sugestão de teste / Resultado esperado: $7"
 		]
 	},
 	"Modelo de Fechamento do Tramite com sucesso" : {
